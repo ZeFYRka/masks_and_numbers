@@ -11,10 +11,10 @@ def mask_input(info_card_account: str) -> str:
     text_str = " ".join([item for item in processing if item.isalpha()])
     numbers_str = "".join([item for item in processing if item.isdigit()])
 
-    if len(numbers_str) == 16:
-        return f"{text_str} {card_masking(numbers_str)}"
-    elif len(numbers_str) > 16:
+    if "Счет" in text_str:
         return f"{text_str} {mask_account_number(numbers_str)}"
+    elif len(numbers_str) == 16:
+        return f"{text_str} {card_masking(numbers_str)}"
     else:
         return "Некорректный номер карты/счета и/или тип"
 
