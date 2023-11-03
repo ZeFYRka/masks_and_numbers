@@ -15,5 +15,3 @@ def mask_account_number(numbers: str) -> str:
     """
     mask_acc_num = numbers.replace(numbers[:-4], "**")
     return f"{mask_acc_num}"
-
-
