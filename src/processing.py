@@ -16,11 +16,7 @@ def list_dict_sort(bag_of_dict: list, sorting_order: bool = True) -> list:
     :param sorting_order: Значение для ключа state
     :return: Новый список, в котором исходные словари отсортированы по убыванию даты (ключ date)
     """
-    if sorting_order:
-        sorted_bag_of_dict = sorted(bag_of_dict, key=lambda item: item["date"])
-        return sorted_bag_of_dict
-    else:
-        sorted_bag_of_dict = sorted(
-            bag_of_dict, key=lambda item: item["date"], reverse=False
-        )
-        return sorted_bag_of_dict
+    sorted_bag_of_dict = sorted(
+        bag_of_dict, key=lambda item: item["date"], reverse=sorting_order
+    )
+    return sorted_bag_of_dict

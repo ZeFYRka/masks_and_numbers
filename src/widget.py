@@ -17,7 +17,7 @@ def mask_input(info_card_account: str) -> str:
     elif len(numbers_str) == 16:
         return f"{text_str} {card_masking(numbers_str)}"
     else:
-        return "Некорректный номер карты/счета и/или тип"
+        raise ValueError("Некорректный номер карты/счета и/или тип")
 
 
 def give_data(time_and_data: str) -> str:
