@@ -3,11 +3,6 @@ import pytest
 from src.widget import mask_input, give_data
 
 
-@pytest.fixture
-def info_card_account():
-    return "Visa Platinum 8990922113665229"
-
-
 @pytest.mark.parametrize(
     "info_card_account, expected",
     [
@@ -39,6 +34,6 @@ def test_give_data(time_and_data, expected):
     assert give_data(time_and_data) == expected
 
 
-# def test_mask_input_invalid(info_card_account):
-#     with pytest.raises(ValueError):
-#         mask_input(info_card_account)
+def test_mask_input_invalid():
+    with pytest.raises(ValueError):
+        mask_input('15968378687051991596837868705199')
