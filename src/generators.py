@@ -27,7 +27,7 @@ def card_number_generator(a: int, b: int) -> Generator:
     :param a: Старт диапазона
     :param b: Стоп
     """
-    for numm in range(a, b):
+    for numm in range(a, b+1):
         if len(str(numm)) < 16:
             num = str((16 - len(str(numm))) * "0" + str(numm))
             yield f"{num[:4]} {num[4:8]} {num[8:12]} {num[12:]}"
