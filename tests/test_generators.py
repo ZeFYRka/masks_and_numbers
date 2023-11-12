@@ -225,6 +225,6 @@ def test_card_number_generator(a, b, expected):
     assert list(card_number_generator(a, b)) == expected
 
 
-# def test_card_number_generator_invalid():
-#     with pytest.raises(ValueError):
-#         card_number_generator(2345615248255286459695825, 12548256935862458962358925845868932)
+def test_card_number_generator_invalid():
+    with pytest.raises(ValueError):
+        list(card_number_generator(2345615248255286459695825, 12548256935862458962358925845868932))
