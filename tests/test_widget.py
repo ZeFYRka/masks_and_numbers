@@ -36,4 +36,4 @@ def test_give_data(time_and_data, expected):
 
 def test_mask_input_invalid():
     with pytest.raises(ValueError):
-        mask_input('15968378687051991596837868705199')
+        mask_input("15968378687051991596837868705199")

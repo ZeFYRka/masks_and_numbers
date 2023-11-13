@@ -210,7 +210,7 @@ def test_transaction_descriptions(list_transact, expected):
     [
         (
             1,
-            6,
+            5,
             [
                 "0000 0000 0000 0001",
                 "0000 0000 0000 0002",
@@ -218,8 +218,9 @@ def test_transaction_descriptions(list_transact, expected):
                 "0000 0000 0000 0004",
                 "0000 0000 0000 0005",
             ],
-        )
-    ]
+        ),
+        (1111111111111111, 1111111111111111, ["1111 1111 1111 1111"]),
+    ],
 )
 def test_card_number_generator(a, b, expected):
     assert list(card_number_generator(a, b)) == expected
@@ -227,4 +228,8 @@ def test_card_number_generator(a, b, expected):
 
 def test_card_number_generator_invalid():
     with pytest.raises(ValueError):
-        list(card_number_generator(2345615248255286459695825, 12548256935862458962358925845868932))
+        list(
+            card_number_generator(
+                2345615248255286459695825, 12548256935862458962358925845868932
+            )
+        )

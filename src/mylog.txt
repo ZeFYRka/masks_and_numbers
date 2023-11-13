@@ -1,0 +1,5 @@
+2023-11-13 00:10:36 my_function ok 
+2023-11-13 00:12:03 my_function error: ZeroDivisionError. Inputs:(1, 0) {}
+2023-11-13 00:12:20 my_function ok 
+2023-11-13 00:14:29 my_function ok 
+2023-11-13 00:16:10 my_function error: ZeroDivisionError. Inputs:(1, 0) {}
