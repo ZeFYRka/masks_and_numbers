@@ -28,7 +28,7 @@ def log(filename: str | None = None) -> Callable:
             time_now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             try:
                 result = function(*args, **kwargs)
-                text_log = f"{time_now} {function.__name__} ok \n"
+                text_log = f"{time_now} {function.__name__} ok\n"
             except Exception as error:
                 text_log = f"{time_now} {function.__name__} error: {type(error).__name__}. Inputs:{args} {kwargs}\n"
                 result = None

@@ -1,2 +1,1 @@
-2023-11-13 02:45:46 test_function error: TypeError. Inputs:(1, '5') {}
-2023-11-13 02:45:46 test_function ok 
+2023-11-13 17:58:53 test_function ok
